@@ -5,7 +5,6 @@ const app = express();
 
 const corsOptions = {
     origin: [
-        'http://localhost:3000',
         'https://weselldeadlots.com'
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
