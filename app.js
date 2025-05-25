@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
 const app = express();
 
 const corsOptions = {
@@ -20,10 +21,10 @@ app.get('/', (req, res) => {
 
 app.get('/getstoredetails', (req, res) => {
     const shopifyConfig = {
-        storeUrl: "738eda.myshopify.com",
-        accessToken: "f6558466e9d3ffd0edfeda79dedc938a",
-        apiVersion: "2024-04",
-      };
+        storeUrl: process.env.STORE_URL,
+        accessToken: process.env.ACCESS_TOKEN,
+        apiVersion: process.env.API_VERSION,
+    };
     res.json(shopifyConfig);
 });
 
