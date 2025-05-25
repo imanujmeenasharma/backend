@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     res.json({ message: 'Welcome to the API' });
 });
 
-app.get('/getstoredetails', (req, res) => {
+app.post('/getstoredetails', (req, res) => {
     const shopifyConfig = {
         storeUrl: process.env.STORE_URL,
         accessToken: process.env.ACCESS_TOKEN,
